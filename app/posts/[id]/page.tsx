@@ -4,7 +4,7 @@ export default async function DetailPostPage({ params }: { params: { id: string 
     const post = await getPosts(params.id)
     return (
         <div>
-            <h1 className='font-bold text-lg'>{post.title}</h1>
+            <h1>{post.title}</h1>
             <p>{post.body}</p>
         </div>
     );
