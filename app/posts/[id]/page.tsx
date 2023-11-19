@@ -3,9 +3,11 @@ import React from 'react';
 export default async function DetailPostPage({ params }: { params: { id: string | number } }) {
     const post = await getPosts(params.id)
     return (
-        <div>
-            <h1>{post.title}</h1>
-            <p>{post.body}</p>
+        <div className='flex flex-col items-center mt-5'>
+            <div className='w-1/2'>
+                <h1 className='text-3xl font-medium'>{post.title}</h1>
+                <p>{post.body}</p>
+            </div>
         </div>
     );
 }

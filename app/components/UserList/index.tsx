@@ -7,7 +7,7 @@ import Search from '../Search/Search';
 export default function UserList({ data }: any) {
     const [search, setSearch] = useState("")
     return (
-        <div>
+        <div className='w-full flex flex-col gap-2'>
             <Search setSearch={setSearch} />
             <Table>
                 <TableHeader>
@@ -17,7 +17,7 @@ export default function UserList({ data }: any) {
                 </TableHeader>
                 <TableBody>
                     {data.map((user: any) => {
-                        if (user.name.includes(search))
+                        if (user.name.toLowerCase().includes(search.toLowerCase()))
                             return (
                                 <TableRow key={user.id}>
                                     <TableCell>

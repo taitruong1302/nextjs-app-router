@@ -7,9 +7,9 @@ import Search from '../Search/Search';
 export default function PostList({ data }: any) {
     const [search, setSearch] = useState("")
     return (
-        <div>
+        <div className='w-full flex flex-col gap-2'>
             <Search setSearch={setSearch} />
-            <Table>
+            <Table >
                 <TableHeader>
                     <TableColumn className='text-lg'>
                         Title
@@ -17,20 +17,20 @@ export default function PostList({ data }: any) {
                 </TableHeader>
                 <TableBody>
                     {data.map((post: any) => {
-                        if (post.title.includes(search)) {
+                        if (post.title.toLowerCase().includes(search.toLowerCase())) {
                             return (
                                 <TableRow key={post.id}>
                                     <TableCell>
                                         <Link href={`/posts/${post.id}`} className='text-medium text-blue-500 visited:text-purple-600 hover:underline underline-offset-1'>
                                             {post.title}
                                         </Link>
+                                        <hr />
                                     </TableCell>
                                 </TableRow>
                             )
                         }
                     })}
                 </TableBody>
-
             </Table>
         </div>
     )

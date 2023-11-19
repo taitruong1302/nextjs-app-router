@@ -6,7 +6,7 @@ import { usePathname } from 'next/navigation';
 export default function Header() {
     const pathname = usePathname()
     return (
-        <Navbar className='bg-gray-400'>
+        <Navbar className='bg-orange-100'>
             <NavbarContent>
                 <NavbarItem>
                     <Link href="/">
@@ -18,7 +18,7 @@ export default function Header() {
                         Posts
                     </Link>
                 </NavbarItem>
-                <NavbarItem>
+                <NavbarItem isActive={pathname === '/users'}>
                     <Link color="foreground" href="/users">
                         Users
                     </Link>
