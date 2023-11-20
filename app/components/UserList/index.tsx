@@ -6,10 +6,11 @@ import Search from '../Search/Search';
 
 export default function UserList({ data }: any) {
     const [search, setSearch] = useState("")
+
     return (
         <div className='w-full flex flex-col gap-2'>
             <Search setSearch={setSearch} />
-            <Table>
+            <Table aria-label='user list'>
                 <TableHeader>
                     <TableColumn className='text-lg bg-gray-300'>
                         Name

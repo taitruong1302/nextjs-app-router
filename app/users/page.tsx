@@ -9,7 +9,7 @@ export default async function App() {
     return (
         <div className='flex flex-col items-center'>
             <div className='w-1/2 flex flex-col gap-2'>
-                <h1 className='text-3xl font-medium'>List Users</h1>
+                <h1 className='text-3xl font-medium mt-2'>List Users</h1>
                 <Suspense fallback={<Loading />}>
                     <UserList data={data} />
                 </Suspense>

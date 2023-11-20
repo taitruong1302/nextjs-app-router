@@ -7,17 +7,17 @@ export default function Header() {
         <Navbar className='bg-orange-100'>
             <NavbarContent>
                 <NavbarItem>
-                    <Link href="/">
+                    <Link href="/" prefetch={false} className='hover:text-blue-500'>
                         Home
                     </Link>
                 </NavbarItem>
                 <NavbarItem>
-                    <Link color="foreground" href="/posts">
+                    <Link href="/posts" prefetch={false} className='hover:text-blue-500'>
                         Posts
                     </Link>
                 </NavbarItem>
                 <NavbarItem>
-                    <Link color="foreground" href="/users">
+                    <Link href="/users" prefetch={false} className='hover:text-blue-500'>
                         Users
                     </Link>
                 </NavbarItem>

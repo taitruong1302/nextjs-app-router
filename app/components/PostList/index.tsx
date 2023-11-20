@@ -9,7 +9,7 @@ export default function PostList({ data }: any) {
     return (
         <div className='w-full flex flex-col gap-2'>
             <Search setSearch={setSearch} />
-            <Table >
+            <Table aria-label='post list'>
                 <TableHeader>
                     <TableColumn className='text-lg bg-gray-300'>
                         Title
