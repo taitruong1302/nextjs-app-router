@@ -11,7 +11,7 @@ export default function UserList({ data }: any) {
             <Search setSearch={setSearch} />
             <Table>
                 <TableHeader>
-                    <TableColumn className='text-lg'>
+                    <TableColumn className='text-lg bg-gray-300'>
                         Name
                     </TableColumn>
                 </TableHeader>
