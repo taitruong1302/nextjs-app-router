@@ -17,7 +17,7 @@ export default function PostList({ data }: any) {
                         Title
                     </TableColumn>
                 </TableHeader>
-                <TableBody>
+                <TableBody items={data}>
                     {data.map((post: any, index: number) => {
                         if (search && post.title.toLowerCase().includes(search.toLowerCase())) {
                             return (
@@ -46,7 +46,7 @@ export default function PostList({ data }: any) {
                     })}
                 </TableBody>
             </Table>
-            {!search && <Pagination total={Math.round(data.length / 5)} initialPage={1} onChange={(page: number) => { setCurrentPage(page) }} />}
+            {!search && <Pagination size='lg' showControls total={Math.round(data.length / 5)} initialPage={1} onChange={(page: number) => { setCurrentPage(page) }} />}
 
         </div>
     )
